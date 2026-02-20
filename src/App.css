@@ -8,18 +8,22 @@
 .App-header {
     text-align: center;
     margin-bottom: 3rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1rem;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 h1 {
-    color: #2563eb;
+    color: #1e3a8a;
     margin-bottom: 0.5rem;
+    font-weight: 800;
 }
 
 .welcome {
-    color: #64748b;
+    color: #334155;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .job-list h2 {
@@ -33,17 +37,19 @@ h1 {
 }
 
 .job-item {
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    background: #ffffff;
+    /* Explicit pure white */
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .job-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #94a3b8;
 }
 
 .job-item h3 {
@@ -59,25 +65,34 @@ h1 {
 
 input[type="url"] {
     flex: 1;
-    padding: 0.6rem 1rem;
-    border: 1px solid #cbd5e1;
+    padding: 0.8rem 1rem;
+    border: 2px solid #cbd5e1;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    color: #0f172a;
+    background-color: #ffffff;
+}
+
+input[type="url"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 button {
-    padding: 0.6rem 1.2rem;
-    background-color: #2563eb;
+    padding: 0.8rem 1.5rem;
+    background-color: #1e3a8a;
     color: white;
     border: none;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
 }
 
 button:hover:not(:disabled) {
-    background-color: #1d4ed8;
+    background-color: #1e40af;
+    transform: translateY(-1px);
 }
 
 button:disabled {
@@ -87,19 +102,22 @@ button:disabled {
 
 .status-message {
     margin-top: 1rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .status-message.success {
-    background-color: #dcfce7;
+    background-color: #f0fdf4;
     color: #166534;
+    border: 1px solid #bbf7d0;
 }
 
 .status-message.error {
-    background-color: #fee2e2;
+    background-color: #fef2f2;
     color: #991b1b;
+    border: 1px solid #fecaca;
 }
 
 .loading,
