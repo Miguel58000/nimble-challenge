@@ -59,7 +59,7 @@ function App() {
             </main>
 
             <footer>
-                <p>© 2026 Nimble Gravity Tech Challenge</p>
+                <p>© 2026 Nimble Gravity Tech Challenge. Developed by Miguel Rodríguez</p>
             </footer>
         </div>
     );
