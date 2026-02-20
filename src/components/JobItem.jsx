@@ -23,10 +23,14 @@ function JobItem({ job, candidateData, onApply }) {
                 uuid: candidateData.uuid,
                 jobId: job.id,
                 candidateId: candidateData.candidateId,
+                applicationId: candidateData.applicationId,
                 repoUrl: repoUrl,
             };
 
+
+            console.log('Final data to be sent:', applicationData);
             await onApply(applicationData);
+
             setStatus('success');
             setMessage('Application submitted successfully!');
         } catch (error) {
