@@ -53,9 +53,10 @@ function JobItem({ job, candidateData, onApply }) {
                         onChange={(e) => setRepoUrl(e.target.value)}
                         disabled={isSubmitting || status === 'success'}
                     />
-                    <button type="submit" disabled={isSubmitting || status === 'success'}>
+                    <button type="submit" disabled={isSubmitting || status === 'success' || !repoUrl.trim()}>
                         {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
+
                 </div>
                 {message && (
                     <p className={`status-message ${status}`}>

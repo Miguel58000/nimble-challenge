@@ -33,8 +33,9 @@ h1 {
 
 .jobs-container {
     display: grid;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
+
 
 .job-item {
     background: #ffffff;
