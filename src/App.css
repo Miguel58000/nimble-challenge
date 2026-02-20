@@ -1,7 +1,121 @@
 .App {
-    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.App-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
 }
 
 h1 {
-    color: #646cff;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.welcome {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.job-list h2 {
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+}
+
+.jobs-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.job-item {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.job-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.job-item h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input[type="url"] {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.status-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.status-message.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #dc2626;
+}
+
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
 }
